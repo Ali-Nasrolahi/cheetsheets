@@ -60,9 +60,9 @@
 
 - #### uppercase and lowercase
 
-  - >  g~[motion] switch case (g~w switch case a word). ~ use for only a char
-  - > gU[motion] uppercase
-  - > gu[motion] lowercase
+  - g~[motion] switch case (g~w switch case a word). ~ use for only a char
+  - gU[motion] uppercase
+  - gu[motion] lowercase
 
 ### Find and Substitute
 
@@ -76,3 +76,32 @@
 
   - > % --> range means whole file could be *3,9* or *.,$* (from here to last line)
   - > g --> all occurrence
+
+## Text Objects and Macros
+
+### a vs i
+
+-  using *a* will include obj despite what *i* does
+
+### Word Objects
+  
+- > daw --> deletes word
+
+### " or ' Objects
+
+- > di" --> whatever between "
+
+### [], (), {} and <> Objects
+
+- > all same which included all texts in between them
+
+### *\<tags\>* Objects
+
+- all about **t** in dat or dit
+- > put cursor on < tag > or < /tag > then type dat --> results in deleted block
+- > or dit for just delelted tags inner text
+
+### Macros
+
+- JUST remember q[regesiter] to record (i.e. qa) and @[reg] to redo.  
+- > Note: @@ redo last reg and 0 at begining of record
