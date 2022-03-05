@@ -81,7 +81,7 @@
 
 ### a vs i
 
--  using *a* will include obj despite what *i* does
+- using *a* will include obj despite what *i* does
 
 ### Word Objects
   
@@ -99,9 +99,52 @@
 
 - all about **t** in dat or dit
 - > put cursor on < tag > or < /tag > then type dat --> results in deleted block
-- > or dit for just delelted tags inner text
+- > or dit for just deleted tags inner text
 
 ### Macros
 
-- JUST remember q[regesiter] to record (i.e. qa) and @[reg] to redo.  
-- > Note: @@ redo last reg and 0 at begining of record
+- JUST remember q[register] to record (i.e. qa) and @[reg] to redo.  
+- > Note: @@ redo last reg and 0 at beginning of record
+
+## Buffers
+
+### Display buffers with :buffer, :ls or :files
+
+### Switching buffers
+
+- :b[id] ,changes to N buffer
+- :b [name] ,changes to buffer associated with [name] file
+- :bp and :bn for previous and next buffer
+- :bf and :bl for first and last buffer
+
+### Add and Delete buffers
+
+- :bd([id]) --> (i.e. bd or bd2)
+- :e [name of file]
+- :E opens Explorer
+
+### To execute a command in all buffers use :bufdo
+
+- i.e. :bufdo %s/old/new/g --> replaces all old with new
+
+### To save or discard changes in all buffers use :qall! or :wall
+
+## Vim split Windows
+
+### Splitting
+
+- ^w + v vertical split
+- ^w + s horizontal split
+
+### Navigating
+
+- ^w + (h/j/k/l) to move around windows
+
+### Resize
+
+- ^w + (shift + '>') increase or 
+- ^w + (shift + '<') decrease width
+- ^w + (shift + '+') increase or 
+- ^w + - decrease height
+- ^w + = splitting in equally windows
+- ^w + | kind of zoom in panes , use ^w + = to undo
