@@ -2,7 +2,7 @@
 
 ## Aliases
 
-### These are my zsh useful aliases might not be available at your machine
+### These are my zsh useful aliases 
 
 ### Status
 
@@ -44,3 +44,31 @@
 
 - > **gco** ===> git checkout
 - > **gcb** ===> git checkout -b
+
+### Rebase
+
+- > **grb** ===> git rebase
+- > **grba** ===> git rebase --abort
+- > **grbc** ===> git rebase --continue
+- > **grbs** ===> git rebase --skip
+
+### Pull
+
+- > **gl** ===> git pull
+- > **ggpull** ===> git pull origin $(git_current_branch)
+- > **glum** ===> git pull upstream $(git_main_branch)
+- > **gpr** ===> git pull --rebase
+
+### Push
+
+- > **gp** ===> git push
+- > **gpv** ===> git push -v
+- > **gpu** ===> git push upstream
+- > **ggpush** ===> git push origin "$(git_current_branch)"
+- > **gpsup** ===> git push --set-upstream origin $(git_current_branch)
+
+### Fetch
+
+- > **gf** ===> git fetch
+- > **gfo** ===> git fetch origin
+- > **gfa** ===> git fetch --all --prune --jobs=10
