@@ -3,4 +3,4 @@
 
 ## My personal Cheat-Sheets for reviewing :)
 
-### Disclaimer: This not complete commands/concepts just a reminder of some
+### Disclaimer: This is not complete commands/concepts just a reminder of some.
