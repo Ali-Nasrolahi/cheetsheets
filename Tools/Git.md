@@ -72,3 +72,13 @@
 - > **gf** ===> git fetch
 - > **gfo** ===> git fetch origin
 - > **gfa** ===> git fetch --all --prune --jobs=10
+
+### Stash
+
+- > *gstaa* ===> git stash apply
+- > *gstc* ===> git stash clear
+- > *gstd* ===> git stash drop
+- > *gstl* ===> git stash list
+- > *gstp* ===> git stash pop
+- > *gsts* ===> git stash show --text
+
