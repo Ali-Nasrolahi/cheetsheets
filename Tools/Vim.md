@@ -142,9 +142,9 @@
 
 ### Resize
 
-- ^w + (shift + '>') increase or 
+- ^w + (shift + '>') increase or
 - ^w + (shift + '<') decrease width
-- ^w + (shift + '+') increase or 
+- ^w + (shift + '+') increase or
 - ^w + - decrease height
 - ^w + = splitting in equally windows
 - ^w + | kind of zoom in panes , use ^w + = to undo

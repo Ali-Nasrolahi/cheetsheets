@@ -124,10 +124,68 @@
 - *Search recursively*: The -r or --recursive option searches in the specified directory and all subdirectories rather than simply the specified directory.
 - *Use an extended regular expression*: To use an extended regular expression, you can pass the -E or --extended- regexp option.
 
-> my favorite combination is *grep -irn "pattern" files*
+> My favorite combination is *grep -irn "pattern" files*
 
 #### sed
 
 > sed [OPTION]... {script-only-if-no-other-script} [input-file]...
 
 > (for instance: sed "s/old/new" file, replaces old with new)
+
+### Managing Processes
+
+#### ps [options]
+
+> CAUTION: watchout switches with dash (-).In other words, *-x* and *x* are **not same**.
+
+- -A and -e ==> display all the processes on the system.
+- x ==> displays all processes owned by the user. Also increases the amount of information that’s displayed.
+- (-u | -U | --User) User ==> Display one user’s processes. The user variable may be a *username* or a *user ID*.
+- *Display extra information*: The -f, -l, j, l, u, and v options all expand the information provided in the ps output.
+- *Display process hierarchy*: The -H, -f, and --forest options group processes and use indentation to show the hierarchy of relationships between processes.
+- -w and w options tell ps that output *must not* exceeded 80 chars per line. (useful for saving ps output to a file)
+
+> My favorite combination is *ps aux* and *ps fax*.
+
+##### Interpreting ps Output
+
+- > *Username*: The name of the user who runs the programs.
+- > *PID*: The process ID (PID) is a number that’s associated with the process. (useful for modify or kill the process).
+- > *PPID*: parent process ID (PPID) identifies the process’s parent.
+- > *TTY*: The teletype (TTY) is a code used to identify a terminal.
+- > CPU time: The **TIME** and **%CPU** headings are two measures of CPU time used.
+  - > First indicates the total amount of CPU time consumed
+  - > Second represents the percentage of CPU time the process is using when ps executes.
+- > CPU priority (nice level): The **NI** column lists these priority codes. Default value is 0.
+  - > *Positive* values represent **reduced** priority, while *negative* values represent **increased** priority.
+- > Memory use
+  - > **RSS** is resident set size (the memory used by the program and its data)
+  - > **%MEM** is the percentage of memory the program is using
+  - > **SHARE** column is memory that’s shared with other processes (such as shared libraries)
+- > *Command*: is the command used to launch the process
+
+#### top
+
+> Switches
+
+- *-d delay*: This specifies the delay between updates, which is normally 5 seconds.
+- *-p pid*: If you want to monitor specific processes, you can list them using this option.
+- *-n iter*: ou can tell top to display a certain number of updates (iter) and then quit.
+- *-b*: This specifies batch mode, in which top doesn’t use the normal screen update commands
+
+> Commands
+
+- *h or ?*:  These keystrokes display help information
+- *k*: You can kill a process with this command
+- *q*: This option quits from top
+- *r*: You can change a process’s priority with this command.
+- *s*: This command changes the display’s update rate.
+- *P*: This sets the display to sort by **CPU usage**
+- *M*: You can change the display to sort by **memory usage** with this command.
+
+#### Jobs, Foreground and Background Processes
+
+- jobs: shows  all jobs in this terminal.
+- Ctrl+Z normally pauses the program and gives you control of the terminal
+- fg [num]: restore job [num to foreground]
+- An alternative to launching a program, using Ctrl+Z, and typing bg to run a program in the background is to append an ampersand (&) to the command when launching the program.
