@@ -148,3 +148,4 @@
 - ^w + - decrease height
 - ^w + = splitting in equally windows
 - ^w + | kind of zoom in panes , use ^w + = to undo
+- ^w + r or + R Rotate windows
