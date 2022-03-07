@@ -6,7 +6,9 @@
 
 #### :help or :h
 
-- > followed by other commands will display their usage  **Note:** using a caret symbol is the same as "Ctrl".
+followed by other commands will display their usage.
+
+**Note:** using a caret symbol is the same as "Ctrl".
 
 - ##### ^] and ^o
 
@@ -81,7 +83,7 @@
 
 ### a vs i
 
-- using *a* will include obj despite what *i* does
+Using *a* will include obj despite what *i* does
 
 ### Word Objects
   
@@ -97,13 +99,16 @@
 
 ### *\<tags\>* Objects
 
-- all about **t** in dat or dit
+It's all about **t** in dat or dit
+
 - > put cursor on < tag > or < /tag > then type dat --> results in deleted block
+
 - > or dit for just deleted tags inner text
 
 ### Macros
 
-- JUST remember q[register] to record (i.e. qa) and @[reg] to redo.  
+JUST remember q[register] to record (i.e. qa) and @[reg] to redo.  
+
 - > Note: @@ redo last reg and 0 at beginning of record
 
 ## Buffers
