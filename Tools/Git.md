@@ -1,8 +1,71 @@
-# Git fun commands and aliases
+# Git commands and aliases
 
+- [Git commands and aliases](#git-commands-and-aliases)
+  - [Git commands explanation](#git-commands-explanation)
+    - [Initialize and help](#initialize-and-help)
+    - [Status](#status)
+    - [Adding](#adding)
+    - [Committing](#committing)
+  - [Aliases](#aliases)
+    - [These are my zsh useful aliases](#these-are-my-zsh-useful-aliases)
+    - [Status](#status-1)
+    - [Add](#add)
+    - [Commit](#commit)
+    - [Logs](#logs)
+    - [Show](#show)
+    - [Branch](#branch)
+    - [Blame](#blame)
+    - [Checkout](#checkout)
+    - [Rebase](#rebase)
+    - [Pull](#pull)
+    - [Push](#push)
+    - [Fetch](#fetch)
+    - [Stash](#stash)
+
+## Git commands explanation
+
+Please checkout [Basic of Git] to familiarize yourself with git concepts and Version Control Systems (VCS)
+
+### Initialize and help
+
+```bash
+git init [dir]      # Create an empty Git repository or reinitialize an existing one
+git help [COMMAND]  # Display help information about Git
+```
+
+### Status
+
+```bash
+git status              # Shows the working tree status
+git status -s, --short  # Give the output in the short-format.
+```
+
+### Adding
+
+```bash
+git add                 # Add file contents to the index
+git add -v, --verbose   # Be verbose
+git add -A, --all       # all files in the entire working tree are updated 
+
+#Examples
+git add git-*.sh
+git add Documentation/\*.txt
+```
+
+checkout `git add` [aliases](#add) as well.
+
+### Committing
+
+```bash
+git commit                            # Record changes to the repository
+git commit  -a, --all                 # moves already added files to stage area 
+git commit  -m <msg>, --message=<msg> # Use the given <msg> as the commit message.
+```
+
+checkout `git commit` [aliases](#commit) as well.
 ## Aliases
 
-### These are my zsh useful aliases 
+### These are my zsh useful aliases
 
 ### Status
 
@@ -13,7 +76,9 @@ gst     #git status
 ### Add
 
 ```bash
-ga      #git add
+ga      # git add
+gaa     # git add --all
+gav     # git add --verbose
 ```
 
 ### Commit
@@ -60,6 +125,7 @@ gbl     #git blame -b -w
 gco     #git checkout
 gcb     #git checkout -b
 ```
+
 ### Rebase
 
 ```bash
@@ -106,3 +172,5 @@ gstl    #git stash list
 gstp    #git stash pop
 gsts    #git stash show --text
 ```
+
+[Basic of Git]: https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/
