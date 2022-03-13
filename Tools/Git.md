@@ -3,12 +3,13 @@
 - [Git commands and aliases](#git-commands-and-aliases)
   - [Git commands explanation](#git-commands-explanation)
     - [Initialize and help](#initialize-and-help)
-    - [Status](#status)
+    - [Status of Working directory](#status-of-working-directory)
     - [Adding](#adding)
-    - [Committing](#committing)
+    - [Committing & resetting](#committing--resetting)
+    - [Log](#log)
   - [Aliases](#aliases)
     - [These are my zsh useful aliases](#these-are-my-zsh-useful-aliases)
-    - [Status](#status-1)
+    - [Status](#status)
     - [Add](#add)
     - [Commit](#commit)
     - [Logs](#logs)
@@ -33,7 +34,7 @@ git init [dir]      # Create an empty Git repository or reinitialize an existing
 git help [COMMAND]  # Display help information about Git
 ```
 
-### Status
+### Status of Working directory
 
 ```bash
 git status              # Shows the working tree status
@@ -46,6 +47,7 @@ git status -s, --short  # Give the output in the short-format.
 git add                 # Add file contents to the index
 git add -v, --verbose   # Be verbose
 git add -A, --all       # all files in the entire working tree are updated 
+git add -u, --update    # Update the index just where it already has an entry matching <pathspec>.
 
 #Examples
 git add git-*.sh
@@ -54,7 +56,7 @@ git add Documentation/\*.txt
 
 checkout `git add` [aliases](#add) as well.
 
-### Committing
+### Committing & resetting
 
 ```bash
 git commit                            # Record changes to the repository
@@ -63,6 +65,22 @@ git commit  -m <msg>, --message=<msg> # Use the given <msg> as the commit messag
 ```
 
 checkout `git commit` [aliases](#commit) as well.
+
+### Log
+
+You can extremely customize `git log` output checkout `git help log` for more options.
+
+```bash
+git log             # Show commit logs
+git log --decorate  # Print out ref names of any commits that are shown
+git log --oneline   # Shorthand for --pretty=oneline --abbrev-commit
+git log --pretty    # Pretty print commit messages        
+git log --graph     # Display graphical representation of commit history
+
+```
+
+checkout `git log` [aliases](#logs) as well.
+
 ## Aliases
 
 ### These are my zsh useful aliases
