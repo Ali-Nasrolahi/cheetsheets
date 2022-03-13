@@ -29,6 +29,8 @@
         - [Interpreting ps Output](#interpreting-ps-output)
       - [top](#top)
       - [Jobs, Foreground and Background Processes](#jobs-foreground-and-background-processes)
+      - [Managing Process Priorities](#managing-process-priorities)
+      - [Killing Processes](#killing-processes)
 
 ## Linux Command-Line Tools
 
@@ -254,3 +256,47 @@ sed "s/old/new" file    # replaces old with new
 - Ctrl+Z normally pauses the program and gives you control of the terminal
 - `fg [num]`: restore job [num to foreground]
 - An alternative to launching a program, using Ctrl+Z, and typing bg to run a program in the background is to append an ampersand `&` to the command when launching the program.
+
+#### Managing Process Priorities
+
+`nice [argument] [command [command-arguments]]`
+
+3 ways to give a specific nice-level:
+
+nice-level's range is: **-20 to +19**
+
+```bash
+nice -12 number-crunch data.txt               # by -num (dash and nice level)
+nice -n 12 number-crunch data.txt             # by -n num
+nice --adjustment=12 number-crunch data.txt   # by --adjustment=num
+```
+
+To renice a running process:
+
+`renice priority [[-p] pids] [[-g] pgrps] [[-u] users]`
+
+```bash
+renice 7 16580 -u pdavison tbaker
+
+#This command sets the priority to 7 for PID 16580 and for all processes owned by pdavison and tbaker.
+```
+
+- specify one or more PIDs (pids)
+
+- one or more group IDs (pgrps)
+
+- one or more usernames (users).
+
+#### Killing Processes
+
+```bash
+kill -l               # Shows all signals
+kill -s signal pid    # Sends a signal to the process (specified by pid) 
+```
+
+`killall [options] [--] name [...]`
+
+```bash
+killall vi            # kills all progrmas named vi
+```
+

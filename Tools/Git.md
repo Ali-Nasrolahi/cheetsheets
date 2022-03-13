@@ -62,6 +62,8 @@ checkout `git add` [aliases](#add) as well.
 git commit                            # Record changes to the repository
 git commit  -a, --all                 # moves already added files to stage area 
 git commit  -m <msg>, --message=<msg> # Use the given <msg> as the commit message.
+
+git reset
 ```
 
 checkout `git commit` [aliases](#commit) as well.
