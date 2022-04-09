@@ -31,6 +31,7 @@
       - [Jobs, Foreground and Background Processes](#jobs-foreground-and-background-processes)
       - [Managing Process Priorities](#managing-process-priorities)
       - [Killing Processes](#killing-processes)
+  - [END](#end)
 
 ## Linux Command-Line Tools
 
@@ -300,3 +301,4 @@ kill -s signal pid    # Sends a signal to the process (specified by pid)
 killall vi            # kills all progrmas named vi
 ```
 
+## END
