@@ -18,7 +18,7 @@
       - [Creating a Filesystem](#creating-a-filesystem)
       - [Creating Swap Space](#creating-swap-space)
   - [Installing Boot Loaders](#installing-boot-loaders)
-  - [End](#end)
+  - [END](#end)
 
 ## Configuring the BIOS and Core Hardware
 
@@ -165,4 +165,4 @@ For `LILO`, the file is `/etc/lilo.conf`; for `GRUB`, it’s either `/boot/grub/
 
 ---
 
-## End
+## END
